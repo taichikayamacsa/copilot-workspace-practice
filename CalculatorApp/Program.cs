@@ -19,32 +19,39 @@ if (!double.TryParse(input2, out double num2))
 Console.WriteLine("演算子を入力してください (+, -, *, /):");
 string? operatorInput = Console.ReadLine();
 
-double result;
 switch (operatorInput)
 {
     case "+":
-        result = num1 + num2;
-        Console.WriteLine($"結果: {num1} + {num2} = {result}");
-        break;
+        {
+            double result = num1 + num2;
+            Console.WriteLine($"結果: {num1} + {num2} = {result}");
+            break;
+        }
     case "-":
-        result = num1 - num2;
-        Console.WriteLine($"結果: {num1} - {num2} = {result}");
-        break;
+        {
+            double result = num1 - num2;
+            Console.WriteLine($"結果: {num1} - {num2} = {result}");
+            break;
+        }
     case "*":
-        result = num1 * num2;
-        Console.WriteLine($"結果: {num1} * {num2} = {result}");
-        break;
+        {
+            double result = num1 * num2;
+            Console.WriteLine($"結果: {num1} * {num2} = {result}");
+            break;
+        }
     case "/":
-        if (num2 == 0)
         {
-            Console.WriteLine("0で割ることはできません");
+            if (num2 == 0)
+            {
+                Console.WriteLine("0で割ることはできません");
+            }
+            else
+            {
+                double result = num1 / num2;
+                Console.WriteLine($"結果: {num1} / {num2} = {result}");
+            }
+            break;
         }
-        else
-        {
-            result = num1 / num2;
-            Console.WriteLine($"結果: {num1} / {num2} = {result}");
-        }
-        break;
     default:
         Console.WriteLine("無効な演算子です");
         break;

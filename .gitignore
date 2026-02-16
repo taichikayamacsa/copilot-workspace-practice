@@ -18,7 +18,6 @@ bld/
 *.userosscache
 *.sln.docstates
 
-# Build results
 *.dll
 *.exe
 *.pdb
